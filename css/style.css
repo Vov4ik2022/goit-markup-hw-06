@@ -873,3 +873,7 @@ ______________________portfolio________________________________________ */
 }
 
 
+.modal-form-icon {
+    outline: 2px solid red;
+    fill: #1b5686;
+}
