@@ -66,7 +66,7 @@
         <div class="overlay-hero section">
           <div class="hero-section-container container">
             <h1 class="hero-section">Ефективні рішення для вашого бізнесу</h1>
-            <button type="button" class="hero-btn" data-modal-open>Замовити послугу</button>
+            <button type="button" class="hero-btn order-btn" data-modal-open>Замовити послугу</button>
           </div>
         </div>
       </section>
@@ -523,6 +523,22 @@
             </li>
           </ul>
         </div>
+        <div>
+          <form class="footer-mailing-form" name="mailing_form">
+            <div>
+              <label for="user_mail" class="footer-mailing-title">Підпишіться на розсилку</label>
+              <input class="input-mailing-form" type="email" name="user_mail" id="user_mail" placeholder="E-mail">
+            </div>
+            <div>
+              <button class="hero-btn mailing-btn" type="submit">
+                Підписатися
+                <svg class="mailing-btn-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-send">icon</use>
+                </svg>
+              </button>
+            </div> 
+          </form>
+        </div>
       </div>
     </footer>
 
@@ -536,7 +552,7 @@
           </svg>
         </button>
         <!-- ==========================NEW============================= -->
-        <strong> Залиште свої дані, ми вам передзвонимо </strong>
+        <strong class="modal-title"> Залиште свої дані, ми вам передзвонимо </strong>
         <form class="modal-form" name="modal_form">
   
           <div class="modal-form-group" role="group">
