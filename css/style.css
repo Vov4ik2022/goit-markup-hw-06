@@ -1021,7 +1021,7 @@ ______________________portfolio________________________________________ */
 
 /* .modal-form-field:hover, */
 .modal-form-field:focus + .modal-form-icon {
-    border: 1px solid var(--color-fill-hover);
+    
     fill: var(--color-fill-hover);
 }
 
@@ -1029,6 +1029,9 @@ ______________________portfolio________________________________________ */
 .modal-form-icon:focus {
     
 } */
+.modal-form-field:focus {
+    border: 1px solid var(--color-fill-hover);
+}
 
 
 .modal-form-checkbox {
