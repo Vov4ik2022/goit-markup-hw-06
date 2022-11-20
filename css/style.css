@@ -681,7 +681,7 @@ body {
 
 .footer-socials-link:hover,
 .footer-socials-link:focus {
-    background-color: #2196F3;
+    background-color: var(--button-color-web-second);
 }
 
 /* Третья частина футера Підпишіться */
@@ -689,7 +689,7 @@ body {
 .footer-mailing-form {
     display: flex;
     align-items: flex-end;
-    /* gap: 12px; */
+    
     
 }
 
@@ -703,19 +703,29 @@ body {
     letter-spacing: 0.03em;
     text-transform: uppercase;
 
-    color: #FFFFFF;
+    color: var(--color-font-hero-address);
 }
 
-.input-mailing-form {
+.mailing-input-form {
     width: 358px;
     height: 50px;
     padding: 15px 16px;
     outline: 1px solid rgba(255, 255, 255, 0.3);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    color:var(--color-font-hero-address);
+    border: 2px;
     border-radius: 4px;
+    
     background-color: var(--background-color-section1-footer);
-
+    border: var(--hover-effect);
+    
 }
+
+.mailing-input-form:focus {
+      border: var(--color-fill-hover);
+   
+}
+/* transition: fill var(--hover-effect); */
+
 
 .mailing-btn {
     width: 200px;
@@ -865,7 +875,7 @@ ______________________portfolio________________________________________ */
     align-items: center;
     background-color: rgba(33, 150, 243, 0.9);
     backdrop-filter: blur(3px);
-    color: #FFFFFF;
+    color: var(--color-font-hero-address);
     user-select: none;
 
     transition: transform 250ms ease-out;  
@@ -911,7 +921,7 @@ ______________________portfolio________________________________________ */
     transform: translate(-50%, -50%);
     min-width: 528px;
     min-height: 581px;
-    background-color: #FFFFFF;
+    background-color: var(--background-color-weite);
     padding: 40px;
     transition: transform var(--hover-effect);
     
@@ -982,7 +992,7 @@ ______________________portfolio________________________________________ */
     font-size: 12px;
     line-height: calc(14 / 12);
     letter-spacing: 0.01em;
-    color: #757575;
+    color: var(--color-font-contact-p);
     margin-bottom: 4px;
 }
 
@@ -1009,52 +1019,65 @@ ______________________portfolio________________________________________ */
  
 }
 
-
-
 .modal-form-icon {
     position: absolute;
     top: 11px;
     left: 12px;
-    fill: #212121;
+    fill: var(--color-font-h2-h3-name);
+    transition: fill var(--hover-effect);
     
 }
 
-/* .modal-form-field:hover, */
 .modal-form-field:focus + .modal-form-icon {
     
     fill: var(--color-fill-hover);
 }
 
-/* .modal-form-icon:hover,
-.modal-form-icon:focus {
-    
-} */
 .modal-form-field:focus {
     border: 1px solid var(--color-fill-hover);
 }
 
 
-.modal-form-checkbox {
+.modal-form-checkbox { 
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin-bottom: 30px;
     gap: 8px;
-  
+    margin-bottom: 30px;
+
 }
 
 .modal-checkbox {
+    appearance: none;
     width: 16px;
     height: 15px;
-    
-    outline: 1px solid #000000;
+    outline: 2px solid transparent;
+    outline-offset: -2px;
+    border: 2px solid var(--color-font-h2-h3-name);
+    border-radius: 2px;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: border-color var(--hover-effect), background-color var(--hover-effect), background-image var(--hover-effect);
+   
+}
 
+.modal-checkbox:checked {
+    border-color: var(--button-color-web-second);
+    background-color: var(--button-color-web-second);
+    background-image: url("data:image/svg+xml,%3Csvg width='13' height='10' viewBox='0 0 13 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.95703 4.75166L1.88825 4.68604L1.81923 4.75141L0.93123 5.59258L0.854858 5.66492L0.930974 5.73753L4.42671 9.07236L4.49574 9.1382L4.56476 9.07236L12.069 1.91352L12.1449 1.84116L12.069 1.76881L11.1873 0.927644L11.1183 0.861826L11.0493 0.927611L4.49577 7.17353L1.95703 4.75166Z' fill='white' stroke='white' stroke-width='0.2'/%3E%3C/svg%3E");
+}
+
+.checkbox-title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: calc(24 / 14);
+    letter-spacing: 0.03em;
+    color: var(--color-font-contact-p);
 }
 
 .checkbox-link {
     
     text-underline-offset: 3px;
-    color: #2196F3;
+    color: var(--button-color-web-second);
 }
 
 .modal-form-message {
@@ -1075,9 +1098,6 @@ ______________________portfolio________________________________________ */
     
 }
 
-
-
-.modal-form-message:hover,
 .modal-form-message:focus {
     border: 1px solid var(--color-fill-hover);
 }
@@ -1088,9 +1108,3 @@ ______________________portfolio________________________________________ */
 
 }
 
-.checkbox-title {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: calc(24 / 14);
-    letter-spacing: 0.03em;
-}
